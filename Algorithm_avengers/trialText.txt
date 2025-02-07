@@ -1,1 +1,48 @@
-Trial text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Financial Literacy</h2>
+        <ul id="menu">
+            <li onclick="showContent('basics')">Basics of Financial Literacy</li>
+            <li onclick="showContent('budgeting')">Budgeting & Money Management</li>
+            <li onclick="showContent('saving')">Saving & Investing</li>
+            <li onclick="showContent('banking')">Banking & Credit Management</li>
+            <li onclick="showContent('debt')">Debt Management</li>
+            <li onclick="showContent('taxes')">Taxes & Retirement Planning</li>
+            <li onclick="showContent('earning')">Earning More & Passive Income</li>
+            <li onclick="showContent('insurance')">Insurance & Risk Management</li>
+            <li onclick="showContent('planning')">Financial Planning & Goal Setting</li>
+            <li onclick="showContent('lifestages')">Financial Literacy for Life Stages</li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <h1>Welcome to Financial Literacy App</h1>
+        <p>Select a topic from the menu to learn more.</p>
+    </div>
+    <script>
+        const contentData = {
+            basics: "<h1>Basics of Financial Literacy</h1><p>Understanding personal finance is the key to financial independence. Learn about the importance of managing money, setting financial goals, and making informed financial decisions.</p>",
+            budgeting: "<h1>Budgeting & Money Management</h1><p>Budgeting is the foundation of financial stability. Learn how to allocate your income effectively, track expenses, and apply the 50/30/20 rule to achieve your financial goals.</p>",
+            saving: "<h1>Saving & Investing</h1><p>Saving money ensures financial security, while investing helps grow your wealth. Learn about different types of savings accounts, investment options, and the power of compound interest.</p>",
+            banking: "<h1>Banking & Credit Management</h1><p>Understanding how banking works is essential. Learn about different types of bank accounts, how credit scores impact financial opportunities, and how to use credit responsibly.</p>",
+            debt: "<h1>Debt Management</h1><p>Debt can be a financial burden if not managed well. Learn about good vs. bad debt, strategies to pay off debt (Snowball and Avalanche methods), and how to avoid financial pitfalls.</p>",
+            taxes: "<h1>Taxes & Retirement Planning</h1><p>Taxes are a significant part of financial planning. Learn how to file taxes efficiently, understand deductions, and plan for a secure retirement through 401(k), IRA, and other retirement plans.</p>",
+            earning: "<h1>Earning More & Passive Income</h1><p>Increasing your income can provide more financial flexibility. Learn about side hustles, freelancing, entrepreneurship, and passive income sources like real estate and dividends.</p>",
+            insurance: "<h1>Insurance & Risk Management</h1><p>Protecting yourself financially is crucial. Learn about different types of insurance (health, life, auto, home) and how to choose the right policies to mitigate financial risks.</p>",
+            planning: "<h1>Financial Planning & Goal Setting</h1><p>Creating a solid financial plan is the key to achieving long-term success. Learn about short-term and long-term financial goals, financial planning tools, and effective strategies.</p>",
+            lifestages: "<h1>Financial Literacy for Life Stages</h1><p>Financial needs change with different life stages. Learn about money management tips for students, young professionals, families, and retirees to stay financially secure at every phase.</p>",
+        };
+        
+        function showContent(topic) {
+            document.getElementById('content').innerHTML = contentData[topic];
+        }
+    </script>
+</body>
+</html>
